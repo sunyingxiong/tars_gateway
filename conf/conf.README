@@ -1,4 +1,8 @@
 {
+    //tcp：1启用，0停止
+    //http:1启用，0停止
+    "capability":{"tcp":1,"http":1},
+    
     "tcp":{
         //涉及时间的都是毫秒，限速统计单位是字节
 	//addr:部署网关节点的IP
@@ -15,7 +19,7 @@
         "per":1000,
         //限速对象
         "obj":"tars_tcp",
-        //token秘钥
+        //jwt_token秘钥，
         "secret":"test",
         //路由方式，1：轮询，2：hash
 		"routeType": 1,
@@ -27,6 +31,7 @@
 	"maxConn": 1,
         //流量统计间隔
         "per":1000 ,
+	//jwt-token 秘钥
         "secret":"test",
 		"routeType": 1
     },
